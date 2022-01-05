@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -13,4 +17,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.hero {
+  background-image: url(../public/hero.jpg);
+  /* height: 785px; */
+  background-repeat: no-repeat;
+
+}
+.pic {
+  background-image: url(../public/bio.jpg);
+  background-repeat: no-repeat;
+}
+
+.blog-hero {
+  background-image: url(../public/blog.jpg);
 }
