@@ -68,7 +68,7 @@ export default function Home({posts}) {
             Uju the storyteller
           </h1>
           <p className='text-slate-100 font-bold md:text-2xl mt-6'>
-            A keen observer of human interest happenings from different parts of the world
+            A keen observer of human interest happenings from different parts of the world.
           </p>
           </div>
          </div>
