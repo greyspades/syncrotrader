@@ -106,7 +106,7 @@ const Post = ({post}) => {
 
       }}>
         {({handleSubmit,handleChange,values})=>(
-          <div className='my-6c'>
+          <div className='my-6'>
            <div className=' grid justify-center md:grid-cols-2'>
            <Input
                 disableUnderline={true}
@@ -131,7 +131,7 @@ const Post = ({post}) => {
         />
            </div>
 
-               <div className=''>
+               <div className='mt-[40px]'>
                <TextField
                                 className='bg-[#5274A6] my-6 rounded-md w-full'
                                 multiline

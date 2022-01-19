@@ -51,7 +51,7 @@ export default function Home({posts}) {
          
           
         <div className=' hero h-[225px]  md:h-[600px] bg-cover md:bg-contain md:col-span-3'>
-          <div className='p-9' style={{backgroundColor:'rgba(0,0,0,0.3)',}}>
+          <div className='p-9 md:h-[100%]' style={{backgroundColor:'rgba(0,0,0,0.3)',}}>
             
         <div className='mt-[-30px] md:mt-[-50px]'>
             <Navbar books={booksScroll} contact={contactScroll} />
