@@ -40,9 +40,9 @@ const Post = ({post}) => {
   
   <div className='bg-[#9BAFCD] md:px-10 md:p-6 md:col-span-3 rounded-lg'>
   
-  <div className='justify-center grid'>
+  {/* <div className='justify-center grid'>
       <img className='w-[500px] h-[200px] md:w-[950px] md:h-[400px]' src={getImage(post.mainImage).url()} />
-  </div>
+  </div> */}
 
   <h1 className='md:text-3xl text-2xl font-bold m-4'>
     {post.title}
