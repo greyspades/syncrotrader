@@ -27,7 +27,9 @@ const Post = ({post}) => {
   // },[])
 
   const getImage=(src)=>{
-    return imageUrlBuilder(client).image(src)
+    if(post){
+      return imageUrlBuilder(client)?.image(src)
+    }
   }
   
   return (
@@ -41,7 +43,7 @@ const Post = ({post}) => {
   <div className='bg-[#9BAFCD] md:px-10 md:p-6 md:col-span-3 rounded-lg'>
   
   <div className='justify-center grid'>
-      <img className='w-[500px] h-[200px] md:w-[950px] md:h-[400px]' src={getImage(post?.mainImage).url()} />
+      <img className='w-[500px] h-[200px] md:w-[950px] md:h-[400px]' src={getImage(post?.mainImage)?.url()} />
   </div>
 
   <h1 className='md:text-3xl text-2xl font-bold m-4'>

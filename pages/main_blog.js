@@ -18,7 +18,7 @@ const Blog = ({posts}) => {
   }
 
     return (
-        <div className='bg-[#5274A6] grid'>
+        <div className='bg-[#5274A6] grid grid-rows-1'>
             <div className='blog-hero h-[400px] bg-no-repeat md:bg-repeat md:bg-cover bg-contain md:h-[550px] md:mt-[-150px]'>
                 <div className='md:mt-[120px] bg-[#2D5797] h-[80px] pt-1 '>
                 
@@ -26,11 +26,11 @@ const Blog = ({posts}) => {
                 
                 </div>
             </div>
-           
-            <div className='grid md:grid-cols-3 justify-items-center justify-center mt-[-100px] md:mt-10 md:p-8'>
-            <div className='m-6 text-2xl'>
+            <div className='m-6 text-2xl text-center md:my-6 my-[-50px]'>
               Blog posts
             </div>
+            <div className='grid md:grid-cols-3 justify-items-center justify-center  md:mt-10 md:p-8'>
+            
               {
                 posts.map(({title='',slug='',body,mainImage,_createdAt,_id})=>slug &&(
                   <div key={_id} className='mb-10'>
