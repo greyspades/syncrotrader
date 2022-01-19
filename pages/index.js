@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import React,{useRef} from 'react'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import bio from '../public/bio.jpg'
@@ -19,17 +20,23 @@ import exile from '../public/exile.jpg'
 // import author from '../public/author.png'
 // import author2 from '../public/author2.png'
 import Contact from '../components/contact'
-import Facebook from '@mui/icons-material/Facebook'
-import instagram from '@mui/icons-material/Instagram'
-import Instagram from '@mui/icons-material/Instagram'
-import { Copyright } from '@mui/icons-material'
+
 import Navbar from '../components/navbar'
 import client from '../components/client'
 import HomeCard from '../components/homeCard'
+import Footer from '../components/footer'
 
 
 
 export default function Home({posts}) {
+
+  const booksRef=useRef()
+  const contactRef=useRef()
+
+  const booksScroll=()=>booksRef.current.scrollIntoView()
+  const contactScroll=()=>contactRef.current.scrollIntoView()
+  //workRef.current.scrollIntoView()
+
   return (
     <div>
       <Head>
@@ -43,9 +50,11 @@ export default function Home({posts}) {
 
          
           
-        <div className=' hero h-[200px] p-9 md:h-[600px] bg-cover md:bg-contain col-span-3'>
+        <div className=' hero h-[225px]  md:h-[600px] bg-cover md:bg-contain md:col-span-3'>
+          <div className='p-9' style={{backgroundColor:'rgba(0,0,0,0.3)',}}>
+            
         <div className='mt-[-30px] md:mt-[-50px]'>
-            <Navbar />
+            <Navbar books={booksScroll} contact={contactScroll} />
           </div>
         
           
@@ -58,7 +67,7 @@ export default function Home({posts}) {
           <h1 className='md:text-7xl md:mt-0 mt-[20px] text-2xl  text-white'>
             Uju the storyteller
           </h1>
-          <p className='text-white text-2xl mt-6'>
+          <p className='text-slate-100 font-bold md:text-2xl mt-6'>
             A keen observer of human interest happenings from different parts of the world
           </p>
           </div>
@@ -66,14 +75,16 @@ export default function Home({posts}) {
 
 
         
+        
+          </div>
         </div>
 
 
-        <div className='grid md:col-span-1  md:pl-0 pl-8'>
-          <h4 className='text-2xl m-[20px] text-center'>
+        <div className='grid md:col-span-1  md:pl-0  md:h-0 h-[600px]'>
+          <h4 className='text-2xl md:m-[20px] text-center'>
             Recent posts
           </h4>
-        <div className='md:mt-[-230px] grid grid-rows-2 gap-8 justify-items-center'>
+        <div className='md:mt-[1px] mt-[-180px] grid  md:grid-rows-2 gap-8 justify-items-center  '>
           {/* <div className='rounded shadow-md w-[280px] h-[200px] bg-[#9BAFCD]'>
 
           </div>
@@ -148,14 +159,14 @@ export default function Home({posts}) {
 
             <div className='md:w-[200px] md:h-[200px] w-[150px] h-[150px] md:col-span-1 bg-[#2D5797] md:bg-[#9BAFCD] pt-4 px-4 md:px-12 md:pt-8 grid place-self-center  rounded-md shadow-md'>
             <Image layout='intrinsic' width={100} height={100} src={romance} />
-            <p className='p-0 text-center text-white'>
+            <p className='p-0 text-center text-black'>
               Romance
             </p>
             </div>
 
         </div>
 
-        <div className='bg-[#9BAFCD] my-8 py-6'>
+        <div ref={booksRef} className='bg-[#9BAFCD] my-8 py-6'>
 
         <h3 className='text-center text-2xl m-9'>
             Her most recent work
@@ -246,31 +257,15 @@ Betina has seen it all. Crushing poverty, beaten and marred by a jealous boyfrie
 
 </div>
 
-<div>
+<div ref={contactRef}>
   <Contact />
 </div>
         </div>
       </main>
-
-      <footer className='grid grid-rows-3 justify-center gap-2 pb-6'>
-
-        <p>
-          <Copyright />
-          2021
-            Uju the storyteller All Rights Reserved
-        </p>
-
-        <div className='grid grid-cols-2 justify-self-center'>
-            <Facebook />
-
-            <Instagram />
-        </div>
-        
-         <div className='grid text-center'>
-         Dev by{' '} Grey
-         </div>
-          
-      </footer>
+          <div>
+            <Footer />
+          </div>
+      
     </div>
   )
 }

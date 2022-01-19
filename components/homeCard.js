@@ -20,7 +20,7 @@ const HomeCard = (props) => {
 
     //const url=slug.current
     return (
-        <div className='grid my-[-70px] md:mt-[-30px] bg-[#9BAFCD] rounded-md shadow-md w-[300px] h-[200px]'>
+        <div className='grid md:my-[10px] my-[-70px]  bg-[#9BAFCD] rounded-md shadow-md w-[300px] h-[200px]'>
             <img className='row-span-2 h-[100px] w-full'  src={urlFor(image)} />
 
                

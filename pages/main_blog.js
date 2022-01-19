@@ -5,6 +5,7 @@ import client from '../components/client'
 import Link from 'next/link'
 import imageUrlBuilder from '@sanity/image-url'
 import {Button} from '@mui/material'
+import Footer from '../components/footer'
 
 
 const Blog = ({posts}) => {
@@ -25,15 +26,22 @@ const Blog = ({posts}) => {
                 
                 </div>
             </div>
-            <div className='grid md:grid-cols-3 justify-items-center justify-center md:mt-10 md:p-8'>
+           
+            <div className='grid md:grid-cols-3 justify-items-center justify-center mt-[-100px] md:mt-10 md:p-8'>
+            <div className='m-6 text-2xl'>
+              Blog posts
+            </div>
               {
                 posts.map(({title='',slug='',body,mainImage,_createdAt,_id})=>slug &&(
-                  <div key={_id} className='md:mb-10'>
+                  <div key={_id} className='mb-10'>
                     <Card title={title} slug={slug.current} body={body} image={mainImage} date={_createdAt} id={_id} />
 
                   </div>
                 ))
               }
+            </div>
+            <div>
+              <Footer />
             </div>
         </div>
     )

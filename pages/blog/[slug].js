@@ -12,6 +12,7 @@ import Comment from '@mui/icons-material/Comment'
 import { Formik } from 'formik'
 import Email from '@mui/icons-material/Email'
 import Axios from 'axios'
+import Footer from '../../components/footer'
 
 
 const Post = ({post}) => {
@@ -40,10 +41,10 @@ const Post = ({post}) => {
   <div className='bg-[#9BAFCD] md:px-10 md:p-6 md:col-span-3 rounded-lg'>
   
   <div className='justify-center grid'>
-      <img className='w-[500px] h-[300px] md:w-[950px] md:h-[400px]' src={getImage(post.mainImage).url()} />
+      <img className='w-[500px] h-[200px] md:w-[950px] md:h-[400px]' src={getImage(post.mainImage).url()} />
   </div>
 
-  <h1 className='text-3xl font-bold m-4'>
+  <h1 className='md:text-3xl text-2xl font-bold m-4'>
     {post.title}
   </h1>
 
@@ -166,9 +167,9 @@ const Post = ({post}) => {
   </div>
 
 
-  <div className='m-8 '>
+  <div className='md:m-8 '>
     
-    <div className='md:fixed grid justify-center h-[700px] w-[250px]  bg-[#9BAFCD] rounded-lg p-4 '>
+    <div className='md:fixed grid justify-center md:h-[700px]md: w-[250px]  bg-[#9BAFCD] rounded-lg md:p-4 '>
         {/* <Card /> */}
         <div>
 
@@ -182,6 +183,7 @@ const Post = ({post}) => {
 
   </div>
 </article>
+<Footer />
     </div>
   )
 }
