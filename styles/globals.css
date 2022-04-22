@@ -18,17 +18,22 @@ a {
 * {
   box-sizing: border-box;
 }
-.hero {
-  background-image: url(../public/hero.jpg);
-  /* height: 785px; */
-  background-repeat: no-repeat;
 
-}
-.pic {
-  background-image: url(../public/bio.jpg);
+.front-page {
+  background-image: url(../public/header.jpg);
+  background-size: contain;
   background-repeat: no-repeat;
+  height: 400px;
+  width: 600px;
 }
 
-.blog-hero {
-  background-image: url(../public/blog.jpg);
+@media all and (min-width:800px) {
+  .front-page {
+    background-image: url(../public/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 900px;
+  }
 }
+

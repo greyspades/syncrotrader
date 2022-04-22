@@ -4,8 +4,12 @@ import { Button } from '@mui/material'
 const Navbar = (props) => {
   const {books,contact}=props
     return (
-        <div>
-            <div className='grid grid-cols-4  md:my-9 justify-items-end'>
+        <div className='grid grid-cols-3'>
+            <div className='grid col-span-1 font-bold text-2xl '>
+              Payfuz
+            </div>
+
+            <div className='grid col-span-2 grid-cols-4  justify-items-end w-[400px]'>
             <Button style={{color:'white'}} href='/' className='text-white md:text-md hover:text-blue-500'>
               Home
             </Button>
