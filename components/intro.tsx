@@ -19,25 +19,38 @@ const Intro = () => {
            </div>
         </div>
 
-        <div className='grid justify-center'>
-        
-            <div className='relative md:w-[900px] h-[300px] bg-[#D3D3D3] md:ml-[150px] my-9 rounded-3xl p-6'>
+        <div className='talk-body'>        
+           <div className='grid justify-center md:mt-[50px]'>
+           <div className='bg-[#D3D3D3] w-[600px] h-[40px] rounded-full relative z-50 shadow-2xl'>
             <h3 className='text-3xl font-bold text-center'>
                 On Your Own Terms
             </h3>
+            </div>
+
+
+           </div>
+        <div className='grid justify-center relative md:mt-[10px] '>
+        
+            <div className='relative ' >
+            <div className='md:w-[900px] h-[250px] bg-[#D3D3D3]  my-9 rounded-full p-10 z-50 relative shadow-2xl'>
+           
 
             {/* //*intro talk */}
             
             <div className='relative' style={{zIndex:200,height:100}}>
             <p  className='text-center z-100 font-semibold text-lg'>
-                {faker.lorem.paragraphs()}
+                {faker.lorem.paragraph()}
             </p>
             </div>
-             <div style={{zIndex:0}} className='absolute left-[-150px] top-[-50px]' >
-             <Image className='z-10' width={400} height={400} src="/statistics(7).png" />
-             </div>
+             
            </div>
+            </div>
+
+           <div style={{zIndex:0}} className='absolute md:right-[30px] md:bottom-[100px] z-0' >
+             <Image className='z-10' width={350} height={350} src="/statistics(7).png" />
+             </div>
         </div>
+                </div>
        </div>
 
     )

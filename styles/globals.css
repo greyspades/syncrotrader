@@ -27,6 +27,11 @@ a {
   width: 600px;
 }
 
+.talk-body {
+  background-image: url('../public/shields.png');
+  
+}
+
 @media all and (min-width:800px) {
   .front-page {
     background-image: url(../public/header.jpg);
