@@ -79,7 +79,7 @@ const Services = () => {
                 
            </div>
 
-            <div className='grid bg-[#5E5E5F] h-[400px]'>
+            <div className='grid bg-[#5E5E5F] h-[300px] mt-[-250px] rounded-3xl'>
 
             </div>
 
